@@ -1,0 +1,57 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GRUDcomEntityFramework.HomePage"
+        xmlns:Custom="http://metro.mahapps.com/winfx/xaml/iconpacks" x:Class="GRUDcomEntityFramework.HomePage.Index"
+        mc:Ignorable="d"
+        Title="Index" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="categoryViewSource" d:DesignSource=" {x:Type local:Category}, CreateList=True}"/>
+        
+    </Window.Resources>
+    <Grid DataContext="{StaticResource categoryViewSource}">
+        <DataGrid x:Name="categoryDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True"
+                    ItemsSource="{Binding}" Margin="10,67,10,137"
+                    RowDetailsVisibilityMode="VisibleWhenSelected" Background="White" BorderBrush="#FFFF2CBC" LoadingRow="CategoryDataGrid_LoadingRow" SelectionChanged="CategoryDataGrid_SelectionChanged">
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="categoryIdColumn" Binding="{Binding Id}"
+                                    Header="Id" Width="50" Foreground="Black" FontSize="14" FontFamily="Microsoft YaHei UI Light" CanUserResize="False"/>
+                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding Username}"
+                                    Header="Username" Width="100"/>
+                <DataGridTextColumn x:Name="Password" Binding="{Binding Password}"
+                                    Header="Password" Width="100"/>
+                <DataGridTemplateColumn Header="Date Register" Width="200">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding DateRegister}" BorderThickness="0" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Delete Register" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="button" ToolTip="Delete" HorizontalAlignment="Center" Height="30"  VerticalAlignment="Center" Width="30">
+                                <Button.ContentTemplate>
+                                    <DataTemplate>
+                                        <Custom:PackIconFontAwesome Kind="TrashAltSolid" Margin="0,0,0,0" VerticalAlignment="Stretch" d:LayoutOverrides="Width"/>
+                                    </DataTemplate>
+                                </Button.ContentTemplate>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+
+
+
+    </Grid>
+</Window>

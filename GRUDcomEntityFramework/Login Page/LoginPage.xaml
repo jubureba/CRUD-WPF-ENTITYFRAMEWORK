@@ -1,0 +1,293 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GRUDcomEntityFramework.Login_Page"
+        xmlns:IconPack="clr-namespace:MainApp.IconPack;assembly=MainApp.IconPack" xmlns:Custom="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:local1="clr-namespace:GRUDcomEntityFramework.Login_Page.code" x:Class="GRUDcomEntityFramework.Login_Page.LoginPage"
+        mc:Ignorable="d"
+        Title="LOGIN - NBL SYSTEM ==========" Height="650" Width="900" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="imgs/Robot-PNG-HD.png">
+    <Window.Resources>
+        <Storyboard x:Key="Animation01">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="gridSingUp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.005"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="gridSingUp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-429.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="gridSingUp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.01"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.8"/>
+            </DoubleAnimationUsingKeyFrames>
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="gridSingUp">
+                <DiscreteBooleanKeyFrame KeyTime="0:0:0.7" Value="True"/>
+                <DiscreteBooleanKeyFrame KeyTime="0:0:1" Value="True"/>
+            </BooleanAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="gridLogin">
+                <EasingDoubleKeyFrame KeyTime="0" Value="444"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.164"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="gridLogin">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.795"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gridSingUp">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gridLogin">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="btnRegister">
+                <DiscreteBooleanKeyFrame KeyTime="0" Value="True"/>
+            </BooleanAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Animation2">
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="gridLogin">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="442"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="gridSingUp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-438.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.004"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="gridSingUp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="gridLogin">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.16"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.8"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="gridLogin">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gridSingUp">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gridLogin">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+
+        </Storyboard>
+    </Window.Resources>
+
+
+    <Window.DataContext>
+        <local1:RegistrationVM/>
+    </Window.DataContext>
+    <Grid MouseLeftButtonDown="MoveWindow">
+        <Grid.Background>
+            <ImageBrush ImageSource="imgs/bgLogin.jpg" TileMode="FlipX"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="440"/>
+            <RowDefinition Height="37*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="736*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <Grid x:Name="gridSingUp" Visibility="Hidden" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="350" Background="Black" Opacity=".8" RenderTransformOrigin="0.5,0.5" >
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+
+            <TextBox x:Name="usernameregister" Text="{Binding Username, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}"
+                     Validation.ErrorTemplate="{StaticResource errorTemplate}" Margin="10,22,10,0"  TextWrapping="Wrap" Padding="20 20 0 0" FontSize="20" Background="#FF151515" Foreground="White" d:LayoutOverrides="HorizontalAlignment" TextOptions.TextHintingMode="Animated" MaxLength="20" Height="50" VerticalAlignment="Top"/>
+            <TextBlock IsHitTestVisible="False" FontSize="15" Text="Username" VerticalAlignment="Top" Foreground="#FF838383" Height="23" Margin="32.5,22,0,0" HorizontalAlignment="Left" Width="125">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Foreground" Value="#c2c2c2"/>
+
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=txtUserRegister}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+
+            <TextBox x:Name="emailregister" Text="{Binding Email, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}"
+                     Validation.ErrorTemplate="{StaticResource errorTemplate}" Margin="10,90,10,0"  TextWrapping="Wrap"  Padding="20 20 0 0" FontSize="20" Background="#FF151515" Foreground="White" d:LayoutOverrides="HorizontalAlignment" TextOptions.TextHintingMode="Animated" MaxLength="20" Height="50" VerticalAlignment="Top"/>
+            <TextBlock x:Name="txtBlockEmail" IsHitTestVisible="False" FontSize="15" Text="E-mail" VerticalAlignment="Top" Foreground="#FF838383" Height="23" Margin="32.5,90,0,0" HorizontalAlignment="Left" Width="125">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Foreground" Value="#c2c2c2"/>
+
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=txtUserRegister}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+
+            <PasswordBox x:Name="txtPasswordRegister" Margin="10,157.167,10,0"  FontSize="20" Padding="20 20 0 0" Background="#FF151515" Foreground="White"  Height="50" VerticalAlignment="Top">
+                <PasswordBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </PasswordBox.Resources>
+            </PasswordBox>
+            <TextBlock IsHitTestVisible="False" FontSize="15" Text="Password" Foreground="#FF838383" Margin="32.5,157.167,0,0" HorizontalAlignment="Left" Width="116" Height="23" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=txtPasswordRegister}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <Button x:Name="btnRegister" Content="Register" Height="50" Margin="10,285,10,0" VerticalAlignment="Top" Background="#FF039DBF" Foreground="White" BorderBrush="#FF039DBF" Opacity=".8" Click="BtnRegister_Click"/>
+        </Grid>
+
+
+        <Grid x:Name="gridLogin" Grid.Row="1" Grid.Column="1"  Visibility="Visible"  HorizontalAlignment="Right" Width="350" Background="Black" Opacity=".8" RenderTransformOrigin="0.5,0.5" >
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <TextBox x:Name="txtLogin" Margin="10,109,10,0"  TextWrapping="Wrap" Text="" Padding="20 20 0 0" FontSize="20" Background="#FF151515" Foreground="White" d:LayoutOverrides="HorizontalAlignment" TextOptions.TextHintingMode="Animated" MaxLength="20" Height="50" VerticalAlignment="Top"/>
+            <TextBlock IsHitTestVisible="False" FontSize="15" Text="User" VerticalAlignment="Top" Foreground="#FF838383" Height="23" Margin="23.5,109,0,0" HorizontalAlignment="Left" Width="125">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Foreground" Value="#c2c2c2"/>
+
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=txtLogin}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <PasswordBox x:Name="txtPassword" Margin="10,197.5,10,0"  FontSize="20" Padding="20 20 0 0" Background="#FF151515" Foreground="White" d:LayoutOverrides="HorizontalAlignment" Height="50" VerticalAlignment="Top">
+                <PasswordBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </PasswordBox.Resources>
+            </PasswordBox>
+            <TextBlock IsHitTestVisible="False" FontSize="15" Text="Password" Foreground="#FF838383" Margin="32.5,197.5,0,0" HorizontalAlignment="Left" Width="116" Height="23" VerticalAlignment="Top">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=txtPassword}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <Button x:Name="btnLogin" Content="LOGIN" Height="50" Margin="10,285,10,0" VerticalAlignment="Top" Background="#FF039DBF" Foreground="White" BorderBrush="#FF039DBF" Opacity=".8" Click="LoginButton"/>
+            <Grid HorizontalAlignment="Right" Height="47.958" Margin="0,110,11,0" VerticalAlignment="Top" Width="50.643" Background="Black" Opacity="0.315">
+                <Custom:PackIconFontAwesome Kind="UserSolid" Foreground="white" HorizontalAlignment="Stretch" Margin="15" VerticalAlignment="Stretch" Height="Auto" Width="Auto"/>
+            </Grid>
+            <Grid HorizontalAlignment="Right" Margin="0,198.54,11,193.502" Width="50.643" Background="Black" Opacity="0.315">
+                <Custom:PackIconFontAwesome Kind="LockSolid" Foreground="white" HorizontalAlignment="Stretch" Margin="15" VerticalAlignment="Stretch" Height="Auto" Width="Auto"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Background="#FFDADADA" Margin="0,0,350,0" Opacity=".8" >
+            <TextBlock x:Name="textBlock6" Height="26" Margin="110.97,33.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="HOW TO LOG IN" Foreground="Black" FontSize="18" FontWeight="Bold" FontFamily="Segoe UI Black" LineHeight="18" TextDecorations="{x:Null}" TextAlignment="Center" HorizontalAlignment="Left"/>
+            <Custom:PackIconFontAwesome Kind="QuestionCircleRegular" HorizontalAlignment="Right" Margin="0,33.5,70.856,0" VerticalAlignment="Top" Width="27.5" Height="26"/>
+            <TextBlock x:Name="textBlock7" Margin="82.593,141.353,83.757,102.687" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF515151" FontSize="14" Height="195.96"><Run Text="To log in to your User, you must have created it in advance."/><LineBreak/><Run/><LineBreak/><Run Text="1- Click on 'SING UP' and enter your data."/><LineBreak/><Run Text="2- Click Log In and enter your details and click the &quot;Login&quot; button to enter."/></TextBlock>
+        </Grid>
+        <TextBlock Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" Foreground="White" TextAlignment="Center" Opacity="0.795" Margin="218.81,29.051,201.143,0" FontFamily="Microsoft JhengHei Light" d:LayoutOverrides="Height" HorizontalAlignment="Center" Cursor="Hand"><Run Text="Developed by Jubureba"/><LineBreak/><Run Text="Portfolio: https://jubureba.github.io/buil"/><Run Text="d"/><LineBreak/><Run/></TextBlock>
+        <Grid Margin="0,10"  Grid.Column="1" Grid.Row="0">
+            <Grid.Resources>
+                <Style x:Key="teste" TargetType="{x:Type TextBlock}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter Property="Opacity" Value="0.7"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" Value="1"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="57*"/>
+                <RowDefinition Height="56*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Opacity=".7" Margin="-54,0,0,0" TextWrapping="Wrap" Text="" Width="213.357" Grid.RowSpan="2">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="imgs/LOGONBL.png"/>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock x:Name="textBlock2" Style="{StaticResource teste}" Padding="10 5 10 5" Margin="164.357,13,0,17.707" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" Width="67.5" Cursor="Hand" Text="Account"/>
+            <TextBlock x:Name="textBlock3" Style="{StaticResource teste}" Padding="10 5 10 5" Margin="231.857,13,0,17.707" TextWrapping="Wrap" Text="Premium" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" Width="73.166" Cursor="Hand"/>
+            <TextBlock x:Name="btnLoginTop" Style="{StaticResource teste}" Padding="10 5 10 5" HorizontalAlignment="Right" Margin="0,13,94.18,17.707" TextWrapping="Wrap" Text="Log In" Width="77" TextAlignment="Center" Foreground="White" Cursor="Hand">
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="MouseDown">
+                        <BeginStoryboard Storyboard="{StaticResource Animation01}"/>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+            <TextBlock x:Name="btnSingupTop" Style="{StaticResource teste}" Padding="10 5 10 5" HorizontalAlignment="Right" Margin="0,13,0.68,17.707" TextWrapping="Wrap" Text="SING UP" Width="93.5" Background="#FF0F6C7E" TextAlignment="Center" Foreground="White" Cursor="Hand" d:LayoutOverrides="Height" MouseLeftButtonDown="BtnSingupTop_MouseLeftButtonDown">
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="MouseDown">
+                        <BeginStoryboard Storyboard="{StaticResource Animation2}"/>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+
+            </TextBlock>
+            <TextBox x:Name="txtSearch" Margin="310.023,13,227.597,17.707" TextWrapping="Wrap" Text="" Padding="20,3,0,0" Background="{x:Null}" Foreground="White" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" d:LayoutOverrides="HorizontalAlignment"/>
+            <TextBlock IsHitTestVisible="False" Text="Search" VerticalAlignment="Top" Foreground="#FF838383" Padding="20,3,0,0" Height="23.96" Margin="310.023,15,0,0" HorizontalAlignment="Left" Width="74.167">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Foreground" Value="#c2c2c2"/>
+
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=txtSearch}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <Custom:PackIconFontAwesome Kind="SearchSolid"  Margin="310.023,15,0,17.707" Foreground="White" Height="Auto" Width="11.875" VerticalAlignment="Stretch"/>
+            <Custom:PackIconFontAwesome Kind="WindowCloseSolid" Grid.Row="0" Foreground="white" Opacity=".5" HorizontalAlignment="Right"  VerticalAlignment="Top" MouseLeftButtonDown="closeApp" Height="20.8" Width="19.514" Cursor="Hand" Margin="0,-4.875,-73.791,0"/>
+            <Custom:PackIconFontAwesome Kind="WindowMinimizeSolid" Grid.Row="0" Foreground="white" Opacity=".5" HorizontalAlignment="Right" Margin="0,-4.875,-49.277,0" MouseLeftButtonDown="minimizeApp" Height="20.8" Width="19.514" Cursor="Hand"/>
+        </Grid>
+
+
+    </Grid>
+</Window>
