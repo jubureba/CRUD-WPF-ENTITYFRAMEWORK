@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRUDcomEntityFramework", "GRUDcomEntityFramework\GRUDcomEntityFramework.csproj", "{33A89ED2-AFB0-4765-9140-043827E0733F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33A89ED2-AFB0-4765-9140-043827E0733F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A89ED2-AFB0-4765-9140-043827E0733F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A89ED2-AFB0-4765-9140-043827E0733F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A89ED2-AFB0-4765-9140-043827E0733F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F3EF407-24CE-4DE0-A23D-33559139C06D}
+	EndGlobalSection
+EndGlobal
